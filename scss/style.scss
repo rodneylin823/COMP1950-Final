@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+//Background Color
+$brand-color: #C9131C;
+$body-bg-color: #FBFBFB;
+$wrapper-bg-color: #FBFBFB;
+$footer-color: #2A2A2A;
+
+//Text Colors
+$text-color-dark: #333333;
+$text-color-light: #7d7d7d;
+$footer-text: #eceded;
+
+//Fonts
+$body-font: 'Open Sans', sans-serif, helvetica,;
+$heading-font: 'bitter', 'roboto', sans-serif;
+$line-height: 1.4;
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phonePortrait: em(420);
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';
+
+//Typograhic elements
+@mixin flatten {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+@mixin margin-center {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// Layout Mixins
+
+// Mixins for creating a flex row of
+// and evenly spacing out the
+// elements along the row
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    background-color: $body-bg-color;
+}
+
+h1, h2, h3, nav a, table {
+    font-family: $heading-font;
+}
+
+// .wrapper {
+//     max-width: 1200px;
+//     @include margin-center;
+//     background-color: $wrapper-bg-color;
+// }
+
+header {
+    background-color: $brand-color;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 150px;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // overflow: hidden;
+    
+   
+    
+     nav button {
+        display: none;
+    }
+    img {
+     
+        flex: 0 1 auto;
+    }
+
+
+
+    nav ul {
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    nav li{
+      padding-top: 75px;
+    }
+
+
+    nav a {
+        color: $footer-text;
+        display: block;
+        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 42px;
+        font-size: 19px;
+        flex: 0 1 auto;
+    
+    }
+    nav a:hover,
+    nav a:focus,
+    nav a:active {
+	background-color: rgba(255,255,255,0.2);
+	outline: none;
+
+    }
+}
+
+.hero {
+    position: relative;
+    padding: 0 150px;
+
+    h2 {
+        line-height: 1.5;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        font-size: 1.35vw;
+        padding: 15px;
+        opacity: 0.8;
+    }
+
+    h1 {
+        line-height: 1.5;
+        margin: 0;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        font-size: 1.35vw;
+        padding: 15px;
+        opacity: 0.8;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex: 0 1 auto;
+    padding: 80px 150px;
+    color: $footer-text;
+    background-color: $brand-color;
+    margin: 0;
+    width:100%;
+
+    h1 {
+        font-size: 2.8rem;
+    }
+    h3 {
+        
+        padding-top: 20px;
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 250px;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    color:$text-color-light;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px 25px;
+    grid-template-areas:
+    "html js "
+    "design vs"
+    "sass github"
+}
+.column {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border: none;
+    flex-wrap: wrap;
+    font-size: calc(1.6rem / (3/2));
+    
+
+}
+
+.box-01 {grid-area: html;}
+.box-02 {grid-area: js;}
+.box-03 {grid-area: design;}
+.box-04 {grid-area: vs;}
+.box-05 {grid-area: sass;}
+.box-06 {grid-area: github;}
+
+
+    
+
+
+
+
+    
+
+
+
+
+
