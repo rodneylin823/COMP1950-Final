@@ -80,18 +80,16 @@ h1, h2, h3, nav a, table {
 // }
 
 header {
-    
     background-color: $brand-color;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 150px;
-    position: fixed;
-    z-index: 900;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // overflow: hidden;
     
    
     
@@ -132,8 +130,8 @@ header {
     nav a:hover,
     nav a:focus,
     nav a:active {
-    transform: scale(1.5);
-    color: $footer-color;
+	background-color: rgba(255,255,255,0.2);
+	outline: none;
 
     }
 }
@@ -146,7 +144,7 @@ header {
         line-height: 1.5;
         margin: 0;
         position: absolute;
-        top: 40%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: uppercase;
@@ -154,15 +152,14 @@ header {
         color: white;
         font-size: 1.35vw;
         padding: 15px;
-        opacity: 1;
-       
+        opacity: 0.8;
     }
 
     h1 {
         line-height: 1.5;
         margin: 0;
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: uppercase;
@@ -170,9 +167,7 @@ header {
         color: white;
         font-size: 1.35vw;
         padding: 15px;
-        opacity: 1;
-       
-        
+        opacity: 0.8;
     }
 }
 
@@ -210,7 +205,6 @@ section {
 
 .row {
     display: grid;
-    padding-top: 75px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px 25px;
     grid-template-areas:
@@ -219,6 +213,7 @@ section {
     "sass github"
 }
 .column {
+    width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -227,12 +222,6 @@ section {
     flex-wrap: wrap;
     font-size: calc(1.6rem / (3/2));
     
-    img {
-        float: left;
-        overflow: hidden;
-        width: 100px;
-        height: 100px;
-    }
 
 }
 
@@ -242,49 +231,6 @@ section {
 .box-04 {grid-area: vs;}
 .box-05 {grid-area: sass;}
 .box-06 {grid-area: github;}
-
-
-.outcome {
-    display: flex;
-}
-
-.instructor {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    img {
-        border-radius: 50%;
-        // overflow: hidden;
-    }
-    .content {
-        padding-left: 80px;
-        line-height: 1.4;
-    }
-
-}
-
-
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    height: 25vh;
-    background-color: $footer-color;
-    color: $footer-text;
-    padding: 0 150px;
-}
-
-    
- .footer-icon img:hover,
-  .footer-icon img:focus,
-    .footer-icon img:active {
-   
-    transform: scale(1.2);
-}
-    
 
 
     
