@@ -22,7 +22,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   height: 150px; }
-  header nav button {
+header nav button {
     display: none; }
   header img {
     flex: 0 1 auto; }
