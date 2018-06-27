@@ -21,7 +21,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 150px; }
+  height: 150px;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  width: 100%;
+  overflow: hidden; }
   header nav button {
     display: none; }
   header img {
@@ -47,8 +52,8 @@ header {
   header nav a:hover,
   header nav a:focus,
   header nav a:active {
-    background-color: rgba(255, 255, 255, 0.2);
-    outline: none; }
+    transform: scale(1.5);
+    color: #2A2A2A; }
 
 .hero {
   position: relative;
@@ -57,7 +62,7 @@ header {
     line-height: 1.5;
     margin: 0;
     position: absolute;
-    top: 25%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
@@ -65,12 +70,12 @@ header {
     color: white;
     font-size: 1.35vw;
     padding: 15px;
-    opacity: 0.8; }
+    opacity: 1; }
   .hero h1 {
     line-height: 1.5;
     margin: 0;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
@@ -78,7 +83,7 @@ header {
     color: white;
     font-size: 1.35vw;
     padding: 15px;
-    opacity: 0.8; }
+    opacity: 1; }
 
 .banner {
   display: flex;
@@ -108,12 +113,12 @@ section {
 
 .row {
   display: grid;
+  padding-top: 75px;
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px 25px;
   grid-template-areas: "html js " "design vs" "sass github"; }
 
 .column {
-  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -121,6 +126,11 @@ section {
   border: none;
   flex-wrap: wrap;
   font-size: calc(1.6rem / (3/2)); }
+  .column img {
+    float: left;
+    overflow: hidden;
+    width: 100px;
+    height: 100px; }
 
 .box-01 {
   grid-area: html; }
@@ -139,5 +149,33 @@ section {
 
 .box-06 {
   grid-area: github; }
+
+.outcome {
+  display: flex; }
+
+.instructor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .instructor img {
+    border-radius: 50%; }
+  .instructor .content {
+    padding-left: 80px;
+    line-height: 1.4; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 25vh;
+  background-color: #2A2A2A;
+  color: #eceded;
+  padding: 0 150px; }
+
+.footer-icon img:hover,
+.footer-icon img:focus,
+.footer-icon img:active {
+  transform: scale(1.2); }
 
 /*# sourceMappingURL=style.css.map */
